@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerador de Questões</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Gerador de Questões</h1>
+    {% if error %}
+    <p class="error-message">{{ error }}</p>
+    {% endif %}
+    <form action="/gerar_questoes" method="post" enctype="multipart/form-data">
+        <input type="file" name="pdf">
+        <input type="submit" value="Gerar Questões">
+    </form>
+</body>
+</html>
+
+

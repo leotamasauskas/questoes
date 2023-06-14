@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questões Geradas</title>
+</head>
+<body>
+    <h1>Questões Geradas</h1>
+    
+    <!-- Botão para voltar à tela inicial -->
+    <button onclick="window.location.href='/'">Voltar à Tela Inicial</button>
+    
+    <br><br>
+    
+    <!-- Exibir as questões geradas -->
+    {% for questao in questoes %}
+    <p>{{ questao[0] }}</p>
+    <ul>
+        {% for alternativa in questao[1] %}
+        <li>{{ alternativa }}</li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</body>
+</html>
+
+
